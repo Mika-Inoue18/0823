@@ -250,13 +250,125 @@ footer ul li a {
 }
 footer .logo {
     width: 160px;
-    margin: 15px 0 10px;
 }
 footer p small {
+    display: inline-block;
     font-size: 10px;
-    height: 30px;
-    line-height: 30px;
+    height: 35px;
 }
-.copy .logo {
-    height: 50px;
+.copy {
+    display: inline-block;
+    position: relative;
+    height: 83px;
+}
+.copy .logo img {
+    width: 250px;
+    margin-left: 350px;
+    margin-top: 12px;
+}
+.copy small {
+    display: inline-block;
+    padding-left: 290px;
+    padding-top: 10px;
+}
+/*****END IPHONE CSS指定******/
+
+@media (min-width: 768px) {
+    header {
+        height: 80px;
+    }
+    header .logo {
+        top: 24px;
+        left: 25px;
+        width: 250px;
+    }
+    header nav {
+        display: block;
+        position: absolute;
+        top: 21px;
+        right: 0;
+    }
+    header nav ul {
+        padding-right: 20px;
+    }
+    header nav ul li {
+        display: inline-block;
+    }
+    header nav ul li:hover {
+        background-color: #b99566;
+        border-radius: 3px;
+    }
+    header nav ul li:hover a {
+        color: #fff;
+    }
+    header nav ul li a {
+        display: block;
+        text-decoration: none;
+        color: #9c9b98;
+        padding: 0 20px;
+        height: 35px;
+        font-size: 17px;
+        line-height: 35px;
+    }
+    #key_visial {
+        margin-bottom: 30px;
+    }
+    main {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    main .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    /***********************************
+「display-flex」を指定することで縦並びだったimgが
+横並びに寝る。
+****************************************/
+    #gourmet {
+        margin-bottom: 15px;
+    }
+    #gourmet article {
+        width: calc(50% - 5px);
+        margin-bottom: 20px;
+    }
+    #information {
+        margin-bottom: 59px;
+    }
+    #information ul {
+        list-style: none;
+    }
+    #information ul li time {
+        font-size: 14px;
+        margin: 0;
+    }
+    #information ul li p {
+        display: inline-block;
+    }
+    #information ul li p::before {
+        padding: 0 10px;
+    }
+    footer ul li {
+        display: inline-block;
+        font-size: 17px;
+        width: 120px;
+        transition: .3s;
+    }
+    footer ul li+li {
+        margin: 0;
+        margin-left: 20px;
+    }
+    footer ul li:hover {
+        background-color: #fff;
+    }
+    footer ul li:hover a {
+        color: #53514c;
+    }
+}
+
+@media (min-width: 1000px){
+    main .container {
+        padding: 10px 0;
+    }
 }
